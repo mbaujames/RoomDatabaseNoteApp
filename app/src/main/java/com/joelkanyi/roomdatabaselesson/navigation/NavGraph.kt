@@ -22,12 +22,15 @@ fun NavGraph(
             route = Screen.AddNote.route,
             arguments = listOf(
                 navArgument(name = TITLE){
+                    defaultValue = ""
                     type = NavType.StringType
                 },
                 navArgument(name = CONTENT) {
+                    defaultValue = ""
                     type = NavType.StringType
                 },
                 navArgument(name = ID) {
+                    defaultValue = -1
                     type = NavType.IntType
                 }
             )
@@ -36,7 +39,7 @@ fun NavGraph(
                 navController = navController,
                 title = navBackStackEntry.arguments?.getString(TITLE) ?: "",
                 content = navBackStackEntry.arguments?.getString(CONTENT) ?: "",
-                id = navBackStackEntry.arguments?.getInt(ID) ?: -1
+                id = navBackStackEntry.arguments?.getInt(ID)
             )
         }
     }

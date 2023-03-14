@@ -54,11 +54,7 @@ fun NotesScreen(
             FloatingActionButton(
                 backgroundColor = Color.Blue,
                 onClick = {
-                    navController.navigate(Screen.AddNote.passNoteValues(
-                        title = "",
-                        content = "",
-                        id = -1
-                    ))
+                    navController.navigate(Screen.AddNote.route)
                 }
             ) {
                Icon(
